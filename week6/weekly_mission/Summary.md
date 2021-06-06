@@ -19,12 +19,17 @@
   - Reviews: 리뷰 수
   - Delivery_Time: 배달시간(예측하고자 하는 값)
 
-- 변수 간 상관관계 확인
-
+- 변수 간 상관관계 확인 
+<image src=https://user-images.githubusercontent.com/46590618/120911321-83f82e80-c6c1-11eb-871a-7cebfc320e19.png width=50%>
 
 ## 2. 머신러닝을 위한 데이터 준비
-- 결측치 처리
-
+- 결측치 확인 및 처리
+  
+  - sklearn의 `SimpleImputer`를 사용하여 중앙값으로 수치형 변수의 결측치를 채워주었다.
+  ```python
+  from sklearn.impute import SimpleImputer
+  imputer = SimpleImputer(strategy="median")
+    ```
 - 새로운 변수 정의
 
 ## 3. 모델 학습
